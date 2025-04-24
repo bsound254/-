@@ -1,6 +1,6 @@
-name: popkid_xtech
+name: andy_xtech
 services:
-  - name: popkid_xtech-service
+  - name: andy_xtech-service
     type: web
     ports:
       - 5000
