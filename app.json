@@ -1,8 +1,8 @@
 {
-  "name": "POPKID-MD",
-  "description": "Javascript WhatsApp bot made by Popkid",
+  "name": "ANDY-MD",
+  "description": "Javascript WhatsApp bot made by Andy",
   "logo": "https://files.catbox.moe/8xk9cz.jpg",
-  "keywords": ["POPKID_XTECH"],
+  "keywords": ["ANDY_XTECH"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "POPKID-MD"
+      "value": "ANDY-MD"
     }, 
       
     "PREFIX": {
@@ -79,7 +79,7 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY POPKID-MD 🖤*"
+      "value": "*SEEN YOUR STATUS BY ANDY-MD 🖤*"
    
      }, 
     
@@ -92,14 +92,14 @@
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "254732297194"
+      "value": "254743454830"
 
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "𝗣𝗢𝗣𝗞𝗜𝗗-𝗠𝗗"
+      "value": "𝗔𝗡𝗗𝗬-𝗠𝗗"
 
       }, 
 
@@ -131,7 +131,7 @@
     "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ PopkidXtech*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ Andytech*"
     },
 
       "DELETE_LINKS": {
@@ -168,7 +168,7 @@
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
       "required": false,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "value": "😹,❤️,🙉,🚮,💔,🤦,👀,📌,🔥,😒,🤔,👻,🤖,🚗,😭,🍸,🎂,💯,🥳,♥️,😂,🔙,🫶,💘,😱,🤮,☣️,🫡,🌞,😋,🙄,😊,🙏,🌄,⚽,😇"
     }, 
     
     "ANTI_DEL_PATH": {
