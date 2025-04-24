@@ -1,15 +1,15 @@
 
 {
-    "bot-name": "ZIPPY XMD",
-    "description": "Whiskey Sockets Baileys Whatsapp bot By Mr popkid",
+    "bot-name": "ANDY MD",
+    "description": "Whiskey Sockets Baileys Whatsapp bot By Mr ANDY",
     "logo": "https://files.catbox.moe/nk71o3.jpg",
     "keywords": ["bot"],
     "documentation-link": "https://paircase.onrender.com/pair",
-    "owner-verification": "popkidbotdeployment@gmail.com",
+    "owner-verification": "oyugiandrew20@gmail.com",
   
     "env": {
       "SESSION_ID": {
-        "description": "Put your SESSION_ID here. Make sure it starts with POPKID~  or get session id from here,  https://paircase.onrender.com/pair",
+        "description": "Put your SESSION_ID here. Make sure it starts with ANDY~  or get session id from here,  https://paircase.onrender.com/pair",
         "value":"",
         "required": true
         
@@ -82,27 +82,27 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*popkid 𝑩𝒐𝒕 𝑽𝒊𝒆𝒘𝒆𝒅 𝒀𝒐𝒖𝒓 𝑺𝒕𝒂𝒕𝒖𝒔 🦄*"
+      "value": "*𝑨𝑵𝑫𝒀 𝑩𝒐𝒕 𝑽𝒊𝒆𝒘𝒆𝒅 𝒀𝒐𝒖𝒓 𝑺𝒕𝒂𝒕𝒖𝒔 🦄*"
    
      }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "𝐌𝐫 Popkid"
+      "value": "𝐌𝐫 ANDY"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "254732297194"
+      "value": "254743454830"
 
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "POPKID-XMD"
+      "value": "ANDY-MD"
 
       }, 
 
@@ -134,7 +134,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ Popkid*"
+      "value": "*© Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ Andy*"
     },
 
       "DELETE_LINKS": {
@@ -171,7 +171,7 @@
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
       "required": false,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "value": "😇,⚽,🌄,🙏,😊,🙄,😋,🌞,🫡,☣️,🤮,😱,💘,🫶,🔙,😂,♥️,🥳,💯,🎂,🍸,😭,🚗,🤖,👻,🤔,😒,🔥,📌,👀,🤦,💔,🚮,🙉,❤️,😹,"
     }, 
     
     "ANTI_DEL_PATH": {
