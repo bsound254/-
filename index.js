@@ -112,7 +112,7 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*✨ Hello, ANDY XTECH Legend! ✨*
+  let up = `*✨ Hello, POPKID-XTECH Legend! ✨*
 
 ╭─〔 *🤖 POPKID-XTECH BOT* 〕  
 ├─▸ *Simplicity. Speed. Power!*  
@@ -127,7 +127,7 @@ const port = process.env.PORT || 9090;
 │   Star Us [**Here**](https://github.com/Popkiddevs/POPKID-XTECH)!  
 ╰─🛠️ *Prefix:* \`${prefix}\`
 
-> _© MADE BY ANDY_`;
+> _© MADE BY POPKID_`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/lkmvah.jpg` }, caption: up })
   }
   })
@@ -783,7 +783,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("ANDY MD STARTED ✅");
+  res.send("POPKID MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
