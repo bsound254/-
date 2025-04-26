@@ -43,7 +43,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['254732297194']
+  const ownerNumber = ['254743454830']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -114,7 +114,7 @@ const port = process.env.PORT || 9090;
   
   let up = `*✨ Hello, POPKID-XTECH Legend! ✨*
 
-╭─〔 *🤖 POPKID-XTECH BOT* 〕  
+╭─〔 *🤖 ANDY-MD BOT* 〕  
 ├─▸ *Simplicity. Speed. Power!*  
 ╰─➤ *Your New WhatsApp Sidekick is Here!*
 
@@ -124,10 +124,10 @@ const port = process.env.PORT || 9090;
 ├─ 📢 *Join Our Channel:*  
 │   Click [**Here**](https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l) to join!  
 ├─ ⭐ *Give Us a Star:*  
-│   Star Us [**Here**](https://github.com/Popkiddevs/POPKID-XTECH)!  
+│   Star Us [**Here**](https://github.com/bsound254/ANDY-MD.git)!  
 ╰─🛠️ *Prefix:* \`${prefix}\`
 
-> _© MADE BY POPKID_`;
+> _© MADE BY ANDY_`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/lkmvah.jpg` }, caption: up })
   }
   })
@@ -213,7 +213,7 @@ const port = process.env.PORT || 9090;
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const jawad = ('254732297194', '254111385747', '254752681127');
+    const jawad = ('254743454830', '254716957024', '254101083601');
     let isCreator = [udp, jawad, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
@@ -783,7 +783,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("POPKID MD STARTED ✅");
+  res.send("ANDY MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
