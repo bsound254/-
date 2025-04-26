@@ -43,7 +43,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['254732297194']
+  const ownerNumber = ['254743454830']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -67,7 +67,7 @@ const {
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("POPKID~", '');
+const sessdata = config.SESSION_ID.replace("ANDY~", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
@@ -112,22 +112,22 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*✨ Hello, POPKID-XTECH Legend! ✨*
+  let up = `*✨ Hello, ANDY-MD Legend! ✨*
 
-╭─〔 *🤖 POPKID-XTECH BOT* 〕  
+╭─〔 *🤖 ANDY-MD BOT* 〕  
 ├─▸ *Simplicity. Speed. Power!*  
 ╰─➤ *Your New WhatsApp Sidekick is Here!*
 
-*❤️ Thank you for Choosing POPKID-MD!*
+*❤️ Thank you for Choosing ANDY-MD!*
 
 ╭──〔 🔗 *Quick Links* 〕  
 ├─ 📢 *Join Our Channel:*  
 │   Click [**Here**](https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l) to join!  
 ├─ ⭐ *Give Us a Star:*  
-│   Star Us [**Here**](https://github.com/Popkiddevs/POPKID-XTECH)!  
+│   Star Us [**Here**](https://github.com/bsound254/ANDY-MD.git)!  
 ╰─🛠️ *Prefix:* \`${prefix}\`
 
-> _© MADE BY POPKID_`;
+> _© MADE BY ANDY_`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/lkmvah.jpg` }, caption: up })
   }
   })
@@ -260,7 +260,7 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-  if(senderNumber.includes("254732297194")){
+  if(senderNumber.includes("254743454830")){
   if(isReact) return
   m.react("🦋")
    }
@@ -783,7 +783,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("POPKID MD STARTED ✅");
+  res.send("ANDY MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
