@@ -42,6 +42,7 @@ const {
   const Crypto = require('crypto')
   const path = require('path')
   const prefix = config.PREFIX
+  const session = config.SESSION_ID
   
   const ownerNumber = ['254743454830']
   
@@ -65,15 +66,19 @@ const {
   setInterval(clearTempDir, 5 * 60 * 1000);
   
   //===================SESSION-AUTH============================
-if (!fs.existsSync(__dirname + '/session/creds.json')) {
-if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("Caseyrhodes~", '');
-const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
-filer.download((err, data) => {
-if(err) throw err
-fs.writeFile(__dirname + '/session/creds.json', data, () => {
-console.log("Session downloaded ✅")
-})})}
+async function authenticationn() {
+  try {
+    if (!fs.existsSync("./session/creds.json")) {
+      console.log('Connecting...');
+      await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
+    } else if (session !== "zokk") {
+      await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
+    }
+  } catch (_0xf348d3) {
+    console.log("Session is invalid: " + _0xf348d3);
+    return;
+  }
+}
 
 const express = require("express");
 const app = express();
@@ -83,6 +88,7 @@ const port = process.env.PORT || 9090;
   
   async function connectToWA() {
   console.log("Connecting to WhatsApp ⏳️...");
+	  await authenticationn();
   const { state, saveCreds } = await useMultiFileAuthState('session')
   var { version } = await fetchLatestBaileysVersion()
   
