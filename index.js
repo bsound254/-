@@ -83,7 +83,7 @@ const port = process.env.PORT || 9090;
   
   async function connectToWA() {
   console.log("Connecting to WhatsApp ⏳️...");
-  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/session/')
+  const { state, saveCreds } = await useMultiFileAuthState('session')
   var { version } = await fetchLatestBaileysVersion()
   
   const conn = makeWASocket({
