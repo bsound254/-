@@ -1,4 +1,5 @@
 const fs = require("fs");
+if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 const config = {
   SESSION_ID: process.env.SESSION_ID || "",
