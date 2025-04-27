@@ -134,7 +134,6 @@ const port = process.env.PORT || 9090;
   conn.ev.on('creds.update', saveCreds)
 
   //==============================
-
   conn.ev.on('messages.update', async updates => {
     for (const update of updates) {
       if (update.update.message === null) {
@@ -143,8 +142,7 @@ const port = process.env.PORT || 9090;
       }
     }
   });
-  //============================== 
-          
+  //==============================    
   //=============readstatus=======
         
   conn.ev.on('messages.upsert', async(mek) => {
