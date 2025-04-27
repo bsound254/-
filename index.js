@@ -65,13 +65,13 @@ const {
   setInterval(clearTempDir, 5 * 60 * 1000);
   
   //===================SESSION-AUTH============================
-if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
+if (!fs.existsSync(__dirname + '/session/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
 const sessdata = config.SESSION_ID.replace("Caseyrhodes~", '');
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
-fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
+fs.writeFile(__dirname + '/session/creds.json', data, () => {
 console.log("Session downloaded ✅")
 })})}
 
@@ -83,7 +83,7 @@ const port = process.env.PORT || 9090;
   
   async function connectToWA() {
   console.log("Connecting to WhatsApp ⏳️...");
-  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
+  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/session/')
   var { version } = await fetchLatestBaileysVersion()
   
   const conn = makeWASocket({
