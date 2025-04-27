@@ -42,9 +42,8 @@ const {
   const Crypto = require('crypto')
   const path = require('path')
   const prefix = config.PREFIX
-  const session = config.SESSION_ID
   
-  const ownerNumber = ['254743454830']
+  const ownerNumber = ['254732297194']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -66,19 +65,15 @@ const {
   setInterval(clearTempDir, 5 * 60 * 1000);
   
   //===================SESSION-AUTH============================
-async function authenticationn() {
-  try {
-    if (!fs.existsSync("./session/creds.json")) {
-      console.log('Connecting...');
-      await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
-    } else if (session !== "zokk") {
-      await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
-    }
-  } catch (_0xf348d3) {
-    console.log("Session is invalid: " + _0xf348d3);
-    return;
-  }
-}
+if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
+if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
+const sessdata = config.SESSION_ID.replace("Caseyrhodes~", '');
+const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
+filer.download((err, data) => {
+if(err) throw err
+fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
+console.log("Session downloaded ✅")
+})})}
 
 const express = require("express");
 const app = express();
@@ -88,8 +83,7 @@ const port = process.env.PORT || 9090;
   
   async function connectToWA() {
   console.log("Connecting to WhatsApp ⏳️...");
-	  await authenticationn();
-  const { state, saveCreds } = await useMultiFileAuthState('session')
+  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
   var { version } = await fetchLatestBaileysVersion()
   
   const conn = makeWASocket({
@@ -118,28 +112,29 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*✨ Hello, ANDY-MD Legend! ✨*
+  let up = `*✨ Hello, POPKID-XTECH Legend! ✨*
 
-╭─〔 *🤖 ANDY-MD BOT* 〕  
+╭─〔 *🤖 POPKID-XTECH BOT* 〕  
 ├─▸ *Simplicity. Speed. Power!*  
 ╰─➤ *Your New WhatsApp Sidekick is Here!*
 
-*❤️ Thank you for Choosing ANDY-MD!*
+*❤️ Thank you for Choosing POPKID-MD!*
 
 ╭──〔 🔗 *Quick Links* 〕  
 ├─ 📢 *Join Our Channel:*  
 │   Click [**Here**](https://whatsapp.com/channel/0029VadQrNI8KMqo79BiHr3l) to join!  
 ├─ ⭐ *Give Us a Star:*  
-│   Star Us [**Here**](https://github.com/bsound254/ANDY-MD.git)!  
+│   Star Us [**Here**](https://github.com/Popkiddevs/POPKID-XTECH)!  
 ╰─🛠️ *Prefix:* \`${prefix}\`
 
-> _© MADE BY ANDY_`;
+> _© MADE BY POPKID_`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/lkmvah.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
 
   //==============================
+
   conn.ev.on('messages.update', async updates => {
     for (const update of updates) {
       if (update.update.message === null) {
@@ -148,7 +143,8 @@ const port = process.env.PORT || 9090;
       }
     }
   });
-  //==============================    
+  //============================== 
+          
   //=============readstatus=======
         
   conn.ev.on('messages.upsert', async(mek) => {
@@ -264,7 +260,7 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-  if(senderNumber.includes("254743454830")){
+  if(senderNumber.includes("254732297194")){
   if(isReact) return
   m.react("🦋")
    }
@@ -787,7 +783,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("ANDY MD STARTED ✅");
+  res.send("POPKID MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
