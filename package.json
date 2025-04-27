@@ -1,12 +1,12 @@
 {
-  "name": "ANDY-MD",
+  "name": "POPKID-MD",
   "version": "3.0.0",
-  "description": "A WhatsApp Bot Created By ANDY",
+  "description": "A WhatsApp Bot Created By Popkid",
   "main": "index.js",
   "scripts": {
-  "start": "pm2 start index.js --deep-monitoring --attach --name ANDY-MD",
-  "stop": "pm2 stop ANDY-MD",
-  "restart": "pm2 restart ANDY-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name ZIPPY-XTECH",
+    "stop": "pm2 stop ZIPPY-XTECH",
+    "restart": "pm2 restart ZIPPY-XTECH"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
@@ -14,8 +14,7 @@
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@vitalets/google-translate-api": "^9.2.0",
-    "@dark-yasiya/scrap":"1.0.1",
-    "dotenv": "^16.4.5",
+    "@dark-yasiya/scrap":"1.0.1",    
     "pino": "^7.0.5",
     "pm2": "^6.0.5",
     "util": "^0.12.4",
